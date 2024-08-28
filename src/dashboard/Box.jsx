@@ -1,6 +1,5 @@
-// import Image from "../../ui/Image";
 import { useNavigate } from "react-router-dom";
-import { deleteDashbordItem } from "../services/apiDashboard";
+import { deleteDashbordItem, deleteMatchingRow } from "../services/apiDashboard";
 
 
 const Box = ({ feedback }) => {
@@ -9,19 +8,24 @@ const Box = ({ feedback }) => {
   const navigate = useNavigate();
 
   function handleViewSubmission(e) {
-    console.log('view-', e.target.value);
-    const formName = e.target.value;
-      navigate(`/feedback?value=${encodeURIComponent(formName)}`);
-    //  navigate("/feedback");
-    // return null;
+     e.preventDefault();
+    const viewForm = e.target.value;
+      navigate(`/feedback?value=${encodeURIComponent(viewForm)}`);
   }
-  function handleEdit() {
-    return null;
+  function handleEdit(e) {
+     e.preventDefault();
+    const editForm = e.target.value;
+    navigate(`/feedback?value=${encodeURIComponent(editForm)}`);
   }
 
   function handleDelete(e) {
     e.preventDefault();
-    return deleteDashbordItem(e.target.id)
+     const deleteForms = e.target.value;
+    //  navigate(`/feedback?value=${encodeURIComponent(deleteForms)}`);
+    console.log(e.target.id, deleteForms);
+    deleteDashbordItem(e.target.id)
+    navigate("/dashboard");
+    //  deleteMatchingRow();
   }
 
   return (
@@ -67,6 +71,7 @@ const Box = ({ feedback }) => {
           className="col-span-1 bg-blue-700 text-white font-bold uppercase"
           name="Delete"
           id={id}
+          value={name}
           onClick={(e)=>handleDelete(e)}
         >Delete
         </button>

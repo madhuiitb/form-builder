@@ -1,4 +1,3 @@
-// src/components/NumericField.js
 import {useState} from "react";
 
 function NumericField({ id, label, onChange, onLabelChange }) {

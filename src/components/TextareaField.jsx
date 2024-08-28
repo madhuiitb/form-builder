@@ -1,9 +1,4 @@
 
-
-
-// src/components/TextareaField.js
-import React from 'react';
-
 function TextareaField({ id, label, onChange, onLabelChange }) {
   return (
     <div className="flex flex-col my-2 w-full border rounded px-5 py-4  bg-white">

@@ -1,4 +1,3 @@
-// src/components/EmoticonField.js
 import React, { useState } from "react";
 
 function EmoticonField({ id, label, onChange, onLabelChange }) {
@@ -24,7 +23,7 @@ function EmoticonField({ id, label, onChange, onLabelChange }) {
           <span
             className="border-r p-3 cursor-pointer  hover:bg-gray-200"
             key={index}
-            onClick={() => handleClick(emoticon)}
+            onClick={(emoticon) => handleClick(emoticon)}
           >
             {emoticon}
           </span>

@@ -1,8 +1,4 @@
 import { useState } from "react";
-import { FaPlus } from "react-icons/fa6";
-// import Modal from "react-modal";
-// import { useNavigate } from "react-router-dom";
-// import CustomModal from "../../ui/CustomModel";
 import Modal from "../components/Modal";
 
 const CreateModal = () => {

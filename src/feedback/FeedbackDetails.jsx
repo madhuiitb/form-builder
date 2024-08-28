@@ -23,13 +23,9 @@ const FeedbackDetails = () => {
 
         fetchData();
       }, [feedbackName]);
-    
-    const extractedFields = feedbackDetails?.map((form) =>
-      form.fields.map(({ id, type, value, label }) => ({ id, type, value, label }))
-    );
 
     const handleClick = () => {
-        navigate('/')
+        navigate('/dashboard')
     }
 
     return (

@@ -43,7 +43,7 @@ const query = new URLSearchParams(location.search);
         console.error("Failed to insert form data:", response.error);
       }
     });
-     navigate("/");
+     navigate("/dashboard");
   };
 
   return (

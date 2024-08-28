@@ -1,6 +1,4 @@
-// src/components/Sidebar.js
 import PropTypes from 'prop-types';
-
 function Sidebar({ addField }) {
   return (
     <div className="flex flex-col justify-start gap-12 bg-gray-100 w-2/6 h-screen p-8">
@@ -114,10 +112,6 @@ function Sidebar({ addField }) {
             />
           </div>
         </button>
-
-        {/* <button onClick={() => addField("textarea")}>Textarea</button>
-      <button onClick={() => addField("number")}>Numeric</button>
-      <button onClick={() => addField("emoticon")}>Emoticon</button> */}
       </div>
       <div>Add Logic</div>
     </div>

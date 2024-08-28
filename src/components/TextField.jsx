@@ -1,6 +1,3 @@
-// src/components/TextField.js
-import React from "react";
-
 function TextField({
   id,
   label,

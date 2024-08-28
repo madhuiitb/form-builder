@@ -1,7 +1,4 @@
-// src/components/Navbar.js
-// import React from "react";
 import PropTypes from "prop-types";
-
 function Navbar({ saveData, submitData }) {
 
   return (

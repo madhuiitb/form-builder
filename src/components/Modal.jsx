@@ -1,4 +1,3 @@
-// Modal.js
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -11,12 +10,12 @@ const Modal = ({ isOpen, onClose, title }) => {
 
   const handleCreate = () => {
     navigate(`/forms?value=${encodeURIComponent(inputValue)}`);
-    setInputValue(""); // Clear the input field
+    setInputValue(""); 
     onClose(); 
   };
 
   const handleCancel = () => {
-    setInputValue(""); // Clear the input field
+    setInputValue(""); 
     onClose();
   };
 

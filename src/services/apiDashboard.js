@@ -27,3 +27,15 @@ export async function deleteDashbordItem(id) {
     }
 
 }
+
+export async function deleteMatchingRow(formName) {
+
+    const { error } = await supabase
+        .from('forms')
+        .delete()
+        .eq('some_column', formName)
+    if (error) {
+        console.log(error);
+        throw new Error('Dashboard could not be loaded')
+    }
+}

@@ -1,20 +1,6 @@
 
 import supabase from "./supabase";
 
-// export const uploadFeedbackForm = async ({ formData }) => {
-
-//     const { data, error } = await supabase
-//         .from('forms')
-//         .insert([formData]
-// );
-
-//     if (error) {
-//         console.error('Error inserting data:', error);
-//     } else {
-//         console.log('Data inserted successfully:', data);
-//     }
-// }
-
 export async function insertFormData(formPayload) {
     const { data, error } = await supabase
         .from('forms')
@@ -40,3 +26,6 @@ export async function getFormData() {
     }
     return data;
 }
+
+
+

@@ -1,11 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
 
-//  id={item[index]?.id}
-//                 type={item[index]?.type}
-//                 value={item[index]?.value}
-//                 label={item[index]?.label}
-
 const Accordion = ({ title, fields }) => {
   const [isOpen, setIsOpen] = useState(false);
 
